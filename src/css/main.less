@@ -1,0 +1,51 @@
+@import "normalizer.css";
+@import "_variables";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+@import "_layout";
+@import "_mainNav";
+
+body {
+  background-color: @page-background;
+}
+
+h1, .h1,
+h2, .h2 {
+  font-family: 'Equinox', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0em;
+  line-height: 1.7em;
+}
+
+h2, .h2 {
+  font-size: 1.83rem;
+}
+
+button,
+.button {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 1em 2.5em;
+  border-width: 0;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: #fff;
+  }
+}
+
+header h1 {
+  line-height: 1;
+  font-size: 18px;
+}

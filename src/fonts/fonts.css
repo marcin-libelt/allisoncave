@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Equinox;
+    font-weight: 400;
+    font-style: normal;
+    src: url("Equinox.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: eb-garamond;
+    font-weight: 400;
+    font-style: normal;
+    src: url("EBGaramond-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Lato;
+    font-weight: 300;
+    font-style: normal;
+    src: url("Lato-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-display: swap;
+}
+@font-face {
+    font-family: Lato;
+    font-weight: 400;
+    font-style: normal;
+    src: url("Lato-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-display: swap;
+}

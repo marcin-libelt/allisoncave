@@ -1,0 +1,56 @@
+.main-nav {
+  &:hover {
+    a {
+      color: rgba(255,255,255,.4);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  a {
+    font-family: "eb-garamond", georgia, serif;
+    font-size: 0.722em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #fff;
+    margin: 0 2em;
+
+    -webkit-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+    -moz-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+    -ms-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+    -o-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+    transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+  }
+}
+
+header {
+  nav.main-nav {
+    display: none;
+  }
+}
+
+footer {
+  .main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    margin-bottom: 8rem;
+
+    a {
+      font-size: 12px;
+      margin: 0 1.3em;
+    }
+  }
+}
+
+
+// ---------- Desktop
+
+@media screen and (min-width: @breakpoint-desktop) {
+  header nav.main-nav {
+    display: block;
+  }
+}

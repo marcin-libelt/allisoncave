@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -5,17 +7,34 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name: `images`,
+            path: `${__dirname}/src/images`,
+        },
     },
-    `gatsby-transformer-sharp`,
+    {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name: `fonts`,
+            path: `${__dirname}/src/fonts`,
+        },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+        resolve: "gatsby-source-strapi",
+        options: {
+            apiURL: process.env.API_URL || "http://localhost:1337",
+            contentTypes: ["article", "category", "writer"],
+            singleTypes: [`contact`, `homepage`, `global`, `about`, `service`],
+            queryLimit: 1000,
+        },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,6 +50,7 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
+
